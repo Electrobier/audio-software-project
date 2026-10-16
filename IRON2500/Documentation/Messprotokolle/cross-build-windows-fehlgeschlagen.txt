@@ -1,0 +1,210 @@
+[0/2] Re-checking globbed directories...
+[1/45] Building CXX object CMakeFiles/IRON2500.dir/Source/PluginProcessor.cpp.obj
+FAILED: [code=1] CMakeFiles/IRON2500.dir/Source/PluginProcessor.cpp.obj 
+/workspace/work/sysroot/usr/bin/x86_64-w64-mingw32-g++-posix -DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1 -DJUCE_MODULE_AVAILABLE_juce_audio_basics=1 -DJUCE_MODULE_AVAILABLE_juce_audio_devices=1 -DJUCE_MODULE_AVAILABLE_juce_audio_formats=1 -DJUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1 -DJUCE_MODULE_AVAILABLE_juce_audio_processors=1 -DJUCE_MODULE_AVAILABLE_juce_audio_utils=1 -DJUCE_MODULE_AVAILABLE_juce_core=1 -DJUCE_MODULE_AVAILABLE_juce_data_structures=1 -DJUCE_MODULE_AVAILABLE_juce_dsp=1 -DJUCE_MODULE_AVAILABLE_juce_events=1 -DJUCE_MODULE_AVAILABLE_juce_graphics=1 -DJUCE_MODULE_AVAILABLE_juce_gui_basics=1 -DJUCE_MODULE_AVAILABLE_juce_gui_extra=1 -DJUCE_PLUGINHOST_VST3=1 -DJUCE_SHARED_CODE=1 -DJUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone -DJUCE_USE_CURL=0 -DJUCE_VST3_CAN_REPLACE_VST2=0 -DJUCE_WEB_BROWSER=0 -DJucePlugin_AAXCategory=0 -DJucePlugin_AAXDisableBypass=0 -DJucePlugin_AAXDisableMultiMono=0 -DJucePlugin_AAXIdentifier=audio.ironinstruments.iron2500 -DJucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode -DJucePlugin_AAXProductId=JucePlugin_PluginCode -DJucePlugin_ARACompatibleArchiveIDs=\"\" -DJucePlugin_ARAContentTypes=0 -DJucePlugin_ARADocumentArchiveID=\"audio.ironinstruments.iron2500.aradocumentarchive.1\" -DJucePlugin_ARAFactoryID=\"audio.ironinstruments.iron2500.arafactory.0.1.0\" -DJucePlugin_ARATransformationFlags=0 -DJucePlugin_AUExportPrefix=IRON_2500AU -DJucePlugin_AUExportPrefixQuoted=\"IRON_2500AU\" -DJucePlugin_AUMainType="'aufx'" -DJucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode -DJucePlugin_AUSubType=JucePlugin_PluginCode -DJucePlugin_Build_AAX=0 -DJucePlugin_Build_AU=0 -DJucePlugin_Build_AUv3=0 -DJucePlugin_Build_LV2=0 -DJucePlugin_Build_Standalone=1 -DJucePlugin_Build_Unity=0 -DJucePlugin_Build_VST3=1 -DJucePlugin_Build_VST=0 -DJucePlugin_CFBundleIdentifier=audio.ironinstruments.iron2500 -DJucePlugin_Desc="\"IRON 2500\"" -DJucePlugin_EditorRequiresKeyboardFocus=0 -DJucePlugin_Enable_ARA=0 -DJucePlugin_IsMidiEffect=0 -DJucePlugin_IsSynth=0 -DJucePlugin_Manufacturer="\"Iron Instruments\"" -DJucePlugin_ManufacturerCode=0x49726e69 -DJucePlugin_ManufacturerEmail=\"\" -DJucePlugin_ManufacturerWebsite=\"\" -DJucePlugin_Name="\"IRON 2500\"" -DJucePlugin_PluginCode=0x49723235 -DJucePlugin_ProducesMidiOutput=0 -DJucePlugin_VSTCategory=kPlugCategEffect -DJucePlugin_VSTNumMidiInputs=16 -DJucePlugin_VSTNumMidiOutputs=16 -DJucePlugin_VSTUniqueID=JucePlugin_PluginCode -DJucePlugin_Version=0.1.0 -DJucePlugin_VersionCode=0x100 -DJucePlugin_VersionString=\"0.1.0\" -DJucePlugin_Vst3Category="\"Fx|Dynamics\"" -DJucePlugin_WantsMidiInput=0 -DNDEBUG=1 -D_NDEBUG=1 -I/workspace/work/build-windows/IRON2500_artefacts/JuceLibraryCode -I/workspace/work/iron2500/Source -I/workspace/work/JUCE/modules -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lv2 -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/serd -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord/src -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sratom -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src -O3 -DNDEBUG -std=gnu++20 -fvisibility=hidden -fno-keep-inline-dllexport -O3 -Wall -Wextra -Wpedantic -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wsign-compare -Wsign-conversion -Wunreachable-code -Wcast-align -Wno-implicit-fallthrough -Wno-maybe-uninitialized -Wno-ignored-qualifiers -Wno-multichar -Wswitch-enum -Wredundant-decls -Wno-strict-overflow -Wshadow -Wfloat-equal -Wmissing-field-initializers -Woverloaded-virtual -Wreorder -Wzero-as-null-pointer-constant -MD -MT CMakeFiles/IRON2500.dir/Source/PluginProcessor.cpp.obj -MF CMakeFiles/IRON2500.dir/Source/PluginProcessor.cpp.obj.d -o CMakeFiles/IRON2500.dir/Source/PluginProcessor.cpp.obj -c /workspace/work/iron2500/Source/PluginProcessor.cpp
+In file included from /workspace/work/JUCE/modules/juce_core/juce_core.h:77,
+                 from /workspace/work/JUCE/modules/juce_graphics/juce_graphics.h:67,
+                 from /workspace/work/JUCE/modules/juce_gui_basics/juce_gui_basics.h:68,
+                 from /workspace/work/JUCE/modules/juce_audio_processors/juce_audio_processors.h:66,
+                 from /workspace/work/iron2500/Source/PluginProcessor.h:2,
+                 from /workspace/work/iron2500/Source/PluginProcessor.cpp:1:
+/workspace/work/JUCE/modules/juce_core/system/juce_TargetPlatform.h:113:6: error: #error "MinGW is not supported. Please use an alternative compiler."
+  113 |     #error "MinGW is not supported. Please use an alternative compiler."
+      |      ^~~~~
+In file included from /workspace/work/JUCE/modules/juce_core/juce_core.h:239:
+/workspace/work/JUCE/modules/juce_core/memory/juce_Memory.h: In function ‘void juce::zeromem(void*, size_t)’:
+/workspace/work/JUCE/modules/juce_core/memory/juce_Memory.h:40:71: error: ‘memset’ was not declared in this scope
+   40 | inline void zeromem (void* memory, size_t numBytes) noexcept        { memset (memory, 0, numBytes); }
+      |                                                                       ^~~~~~
+/workspace/work/JUCE/modules/juce_core/memory/juce_Memory.h:1:1: note: ‘memset’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+  +++ |+#include <cstring>
+    1 | /*
+/workspace/work/JUCE/modules/juce_core/memory/juce_Memory.h: In function ‘void juce::zerostruct(Type&)’:
+/workspace/work/JUCE/modules/juce_core/memory/juce_Memory.h:44:71: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+   44 | inline void zerostruct (Type& structure) noexcept                   { memset ((void*) &structure, 0, sizeof (structure)); }
+      |                                                                       ^~~~~~
+/workspace/work/JUCE/modules/juce_core/memory/juce_Memory.h:44:71: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from /workspace/work/JUCE/modules/juce_core/juce_core.h:247:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_UTF8.h: In member function ‘size_t juce::CharPointer_UTF8::sizeInBytes() const’:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_UTF8.h:285:16: error: ‘strlen’ was not declared in this scope
+  285 |         return strlen (data) + 1;
+      |                ^~~~~~
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_UTF8.h:1:1: note: ‘strlen’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+  +++ |+#include <cstring>
+    1 | /*
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_UTF8.h: In member function ‘juce::CharPointer_UTF8 juce::CharPointer_UTF8::findTerminatingNull() const’:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_UTF8.h:329:41: error: ‘strlen’ was not declared in this scope
+  329 |         return CharPointer_UTF8 (data + strlen (data));
+      |                                         ^~~~~~
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_UTF8.h:329:41: note: ‘strlen’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+In file included from /workspace/work/JUCE/modules/juce_core/juce_core.h:250:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h: In member function ‘size_t juce::CharPointer_ASCII::length() const’:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:169:25: error: ‘strlen’ was not declared in this scope
+  169 |         return (size_t) strlen (data);
+      |                         ^~~~~~
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:1:1: note: ‘strlen’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+  +++ |+#include <cstring>
+    1 | /*
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h: In member function ‘int juce::CharPointer_ASCII::compare(juce::CharPointer_ASCII) const’:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:253:16: error: ‘strcmp’ was not declared in this scope
+  253 |         return strcmp (data, other.data);
+      |                ^~~~~~
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:253:16: note: ‘strcmp’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h: In member function ‘int juce::CharPointer_ASCII::compareUpTo(juce::CharPointer_ASCII, int) const’:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:266:16: error: ‘strncmp’ was not declared in this scope
+  266 |         return strncmp (data, other.data, (size_t) maxChars);
+      |                ^~~~~~~
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:266:16: note: ‘strncmp’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h: In member function ‘int juce::CharPointer_ASCII::compareIgnoreCase(juce::CharPointer_ASCII) const’:
+/workspace/work/JUCE/modules/juce_core/text/juce_CharPointer_ASCII.h:281:16: error: ‘stricmp’ was not declared in this scope
+  281 |         return stricmp (data, other.data);
+      |                ^~~~~~~
+In file included from /workspace/work/JUCE/modules/juce_core/juce_core.h:307:
+/workspace/work/JUCE/modules/juce_core/containers/juce_HashMap.h: In static member function ‘static int juce::DefaultHashFunctions::generateHash(const void*, int)’:
+/workspace/work/JUCE/modules/juce_core/containers/juce_HashMap.h:61:109: error: cast from ‘const void*’ to ‘juce::pointer_sized_uint’ {aka ‘unsigned int’} loses precision [-fpermissive]
+   61 |     static int generateHash (const void* key, int upperLimit) noexcept      { return generateHash ((uint64) (pointer_sized_uint) key, upperLimit); }
+      |                                                                                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /workspace/work/JUCE/modules/juce_graphics/juce_graphics.h:147:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h: In member function ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::replaceLine(juce::PixelRGB*, juce::PixelARGB, int) const’:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:622:17: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+  622 |                 memset ((void*) dest, colour.getRed(), (size_t) width * 3);   // if all the component values are the same, we can cheat..
+      |                 ^~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h: In member function ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::replaceLine(juce::PixelAlpha*, juce::PixelARGB, int) const’:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:630:17: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+  630 |                 memset ((void*) dest, colour.getAlpha(), (size_t) width);
+      |                 ^~~~~~
+In file included from /workspace/work/JUCE/modules/juce_audio_basics/juce_audio_basics.h:93,
+                 from /workspace/work/JUCE/modules/juce_audio_processors/juce_audio_processors.h:68:
+/workspace/work/JUCE/modules/juce_audio_basics/buffers/juce_AudioDataConverters.h: In member function ‘void juce::AudioData::UInt8::clearMultiple(int)’:
+/workspace/work/JUCE/modules/juce_audio_basics/buffers/juce_AudioDataConverters.h:151:67: error: ‘memset’ was not declared in this scope
+  151 |         inline void clearMultiple (int num) noexcept            { memset (data, 128, (size_t) num) ;}
+      |                                                                   ^~~~~~
+/workspace/work/JUCE/modules/juce_audio_basics/buffers/juce_AudioDataConverters.h:1:1: note: ‘memset’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+  +++ |+#include <cstring>
+    1 | /*
+In file included from /workspace/work/iron2500/Source/PluginProcessor.h:3:
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h: In member function ‘void iron::Saturator::prepare()’:
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h:38:18: warning: conversion to ‘std::array<double, 17>::size_type’ {aka ‘long long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+   38 |             taps[i]=(i==8?.5:std::sin(std::numbers::pi*.5*n)/(std::numbers::pi*n))
+      |                  ^
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h:40:23: warning: conversion to ‘std::array<double, 17>::size_type’ {aka ‘long long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+   40 |             sum+=taps[i];
+      |                       ^
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h: In member function ‘void iron::CompressorEngine::process(double&, double&, int)’:
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h:78:30: warning: conversion to ‘std::array<iron::CompressorEngine::Channel, 2>::size_type’ {aka ‘long long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+   78 |             auto& c=channels[ch]; in[ch]=raw[ch]*gain(current.trim);
+      |                              ^~
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h:92:30: warning: conversion to ‘std::array<iron::CompressorEngine::Channel, 2>::size_type’ {aka ‘long long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+   92 |             auto& c=channels[ch];
+      |                              ^~
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h: In member function ‘double iron::CompressorEngine::meter(int, int) const’:
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h:119:42: warning: conversion to ‘std::array<iron::CompressorEngine::Channel, 2>::size_type’ {aka ‘long long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  119 |         const auto& c=channels[std::clamp(ch,0,1)];
+      |                                ~~~~~~~~~~^~~~~~~~
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h: In member function ‘double iron::CompressorEngine::gainReduction(int) const’:
+/workspace/work/iron2500/Source/DSP/CompressorEngine.h:123:58: warning: conversion to ‘std::array<iron::CompressorEngine::Channel, 2>::size_type’ {aka ‘long long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+  123 |     double gainReduction(int ch) const { return channels[ch].gr; }
+      |                                                          ^~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h: In instantiation of ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::replaceLine(juce::PixelRGB*, juce::PixelARGB, int) const [with PixelType = juce::PixelRGB; bool replaceExisting = true]’:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:557:29:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::handleEdgeTableLine(int, int, int) const [with PixelType = juce::PixelRGB; bool replaceExisting = true]’
+  557 |                 replaceLine (dest, p, width);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1935:79:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::SubRectangleIteratorFloat::iterate(Renderer&) const [with Renderer = juce::RenderingHelpers::EdgeTableFillers::SolidColour<juce::PixelRGB, true>; SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1935 |                                 if (clippedWidth > 0)   r.handleEdgeTableLine (clippedLeft, clippedWidth, f.topAlpha);
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1501:26:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::renderSolidFill(Iterator&, const juce::Image::BitmapData&, juce::PixelARGB, bool, DestPixelType*) [with Iterator = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat; DestPixelType = juce::PixelRGB]’
+ 1501 |             iter.iterate (r);
+      |             ~~~~~~~~~~~~~^~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:2487:67:   required from ‘void juce::RenderingHelpers::SoftwareRendererSavedState::fillWithSolidColour(IteratorType&, juce::PixelARGB, bool) const [with IteratorType = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat]’
+ 2487 |             case Image::RGB:    EdgeTableFillers::renderSolidFill (iter, destData, colour, replaceContents, (PixelRGB*) nullptr); break;
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1806:39:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::fillRectWithColour(SavedStateType&, juce::Rectangle<float>, juce::PixelARGB) const [with SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1806 |             state.fillWithSolidColour (iter, colour, false);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1803:14:   required from here
+ 1803 |         void fillRectWithColour (SavedStateType& state, Rectangle<float> area, PixelARGB colour) const override
+      |              ^~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:622:24: error: ‘memset’ was not declared in this scope
+  622 |                 memset ((void*) dest, colour.getRed(), (size_t) width * 3);   // if all the component values are the same, we can cheat..
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1:1: note: ‘memset’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+  +++ |+#include <cstring>
+    1 | /*
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h: In instantiation of ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::replaceLine(juce::PixelRGB*, juce::PixelARGB, int) const [with PixelType = juce::PixelRGB; bool replaceExisting = false]’:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:557:29:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::handleEdgeTableLine(int, int, int) const [with PixelType = juce::PixelRGB; bool replaceExisting = false]’
+  557 |                 replaceLine (dest, p, width);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1935:79:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::SubRectangleIteratorFloat::iterate(Renderer&) const [with Renderer = juce::RenderingHelpers::EdgeTableFillers::SolidColour<juce::PixelRGB, false>; SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1935 |                                 if (clippedWidth > 0)   r.handleEdgeTableLine (clippedLeft, clippedWidth, f.topAlpha);
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1506:26:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::renderSolidFill(Iterator&, const juce::Image::BitmapData&, juce::PixelARGB, bool, DestPixelType*) [with Iterator = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat; DestPixelType = juce::PixelRGB]’
+ 1506 |             iter.iterate (r);
+      |             ~~~~~~~~~~~~~^~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:2487:67:   required from ‘void juce::RenderingHelpers::SoftwareRendererSavedState::fillWithSolidColour(IteratorType&, juce::PixelARGB, bool) const [with IteratorType = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat]’
+ 2487 |             case Image::RGB:    EdgeTableFillers::renderSolidFill (iter, destData, colour, replaceContents, (PixelRGB*) nullptr); break;
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1806:39:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::fillRectWithColour(SavedStateType&, juce::Rectangle<float>, juce::PixelARGB) const [with SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1806 |             state.fillWithSolidColour (iter, colour, false);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1803:14:   required from here
+ 1803 |         void fillRectWithColour (SavedStateType& state, Rectangle<float> area, PixelARGB colour) const override
+      |              ^~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:622:24: error: ‘memset’ was not declared in this scope
+  622 |                 memset ((void*) dest, colour.getRed(), (size_t) width * 3);   // if all the component values are the same, we can cheat..
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:622:24: note: ‘memset’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h: In instantiation of ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::replaceLine(juce::PixelAlpha*, juce::PixelARGB, int) const [with PixelType = juce::PixelAlpha; bool replaceExisting = true]’:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:557:29:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::handleEdgeTableLine(int, int, int) const [with PixelType = juce::PixelAlpha; bool replaceExisting = true]’
+  557 |                 replaceLine (dest, p, width);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1935:79:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::SubRectangleIteratorFloat::iterate(Renderer&) const [with Renderer = juce::RenderingHelpers::EdgeTableFillers::SolidColour<juce::PixelAlpha, true>; SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1935 |                                 if (clippedWidth > 0)   r.handleEdgeTableLine (clippedLeft, clippedWidth, f.topAlpha);
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1501:26:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::renderSolidFill(Iterator&, const juce::Image::BitmapData&, juce::PixelARGB, bool, DestPixelType*) [with Iterator = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat; DestPixelType = juce::PixelAlpha]’
+ 1501 |             iter.iterate (r);
+      |             ~~~~~~~~~~~~~^~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:2490:67:   required from ‘void juce::RenderingHelpers::SoftwareRendererSavedState::fillWithSolidColour(IteratorType&, juce::PixelARGB, bool) const [with IteratorType = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat]’
+ 2490 |             default:            EdgeTableFillers::renderSolidFill (iter, destData, colour, replaceContents, (PixelAlpha*) nullptr); break;
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1806:39:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::fillRectWithColour(SavedStateType&, juce::Rectangle<float>, juce::PixelARGB) const [with SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1806 |             state.fillWithSolidColour (iter, colour, false);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1803:14:   required from here
+ 1803 |         void fillRectWithColour (SavedStateType& state, Rectangle<float> area, PixelARGB colour) const override
+      |              ^~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:630:24: error: ‘memset’ was not declared in this scope
+  630 |                 memset ((void*) dest, colour.getAlpha(), (size_t) width);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:630:24: note: ‘memset’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h: In instantiation of ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::replaceLine(juce::PixelAlpha*, juce::PixelARGB, int) const [with PixelType = juce::PixelAlpha; bool replaceExisting = false]’:
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:557:29:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::SolidColour<PixelType, replaceExisting>::handleEdgeTableLine(int, int, int) const [with PixelType = juce::PixelAlpha; bool replaceExisting = false]’
+  557 |                 replaceLine (dest, p, width);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1935:79:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::SubRectangleIteratorFloat::iterate(Renderer&) const [with Renderer = juce::RenderingHelpers::EdgeTableFillers::SolidColour<juce::PixelAlpha, false>; SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1935 |                                 if (clippedWidth > 0)   r.handleEdgeTableLine (clippedLeft, clippedWidth, f.topAlpha);
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1506:26:   required from ‘void juce::RenderingHelpers::EdgeTableFillers::renderSolidFill(Iterator&, const juce::Image::BitmapData&, juce::PixelARGB, bool, DestPixelType*) [with Iterator = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat; DestPixelType = juce::PixelAlpha]’
+ 1506 |             iter.iterate (r);
+      |             ~~~~~~~~~~~~~^~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:2490:67:   required from ‘void juce::RenderingHelpers::SoftwareRendererSavedState::fillWithSolidColour(IteratorType&, juce::PixelARGB, bool) const [with IteratorType = juce::RenderingHelpers::ClipRegions::RectangleListRegion<juce::RenderingHelpers::SoftwareRendererSavedState>::SubRectangleIteratorFloat]’
+ 2490 |             default:            EdgeTableFillers::renderSolidFill (iter, destData, colour, replaceContents, (PixelAlpha*) nullptr); break;
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1806:39:   required from ‘void juce::RenderingHelpers::ClipRegions::RectangleListRegion<SavedStateType>::fillRectWithColour(SavedStateType&, juce::Rectangle<float>, juce::PixelARGB) const [with SavedStateType = juce::RenderingHelpers::SoftwareRendererSavedState]’
+ 1806 |             state.fillWithSolidColour (iter, colour, false);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:1803:14:   required from here
+ 1803 |         void fillRectWithColour (SavedStateType& state, Rectangle<float> area, PixelARGB colour) const override
+      |              ^~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:630:24: error: ‘memset’ was not declared in this scope
+  630 |                 memset ((void*) dest, colour.getAlpha(), (size_t) width);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/work/JUCE/modules/juce_graphics/native/juce_RenderingHelpers.h:630:24: note: ‘memset’ is defined in header ‘<cstring>’; this is probably fixable by adding ‘#include <cstring>’
+[2/45] Building CXX object CMakeFiles/juce_vst3_helper.dir/workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.obj
+FAILED: [code=1] CMakeFiles/juce_vst3_helper.dir/workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.obj 
+/workspace/work/sysroot/usr/bin/x86_64-w64-mingw32-g++-posix -DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1 -DNDEBUG=1 -D_NDEBUG=1 -I/workspace/work/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I/workspace/work/JUCE/modules -O3 -DNDEBUG -std=gnu++20 -O3 -MD -MT CMakeFiles/juce_vst3_helper.dir/workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.obj -MF CMakeFiles/juce_vst3_helper.dir/workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.obj.d -o CMakeFiles/juce_vst3_helper.dir/workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.obj -c /workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp
+In file included from /workspace/work/JUCE/modules/juce_core/system/juce_CompilerWarnings.h:37,
+                 from /workspace/work/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp:40:
+/workspace/work/JUCE/modules/juce_core/system/juce_TargetPlatform.h:113:6: error: #error "MinGW is not supported. Please use an alternative compiler."
+  113 |     #error "MinGW is not supported. Please use an alternative compiler."
+      |      ^~~~~
+ninja: build stopped: subcommand failed.

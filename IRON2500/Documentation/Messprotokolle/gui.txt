@@ -1,0 +1,4 @@
+Fontconfig error: No writable cache directories
+PASS processor Mono/Stereo, Double, six sample rates and five block sizes
+GUI snapshot written
+PASS state restore, disk preset, A/B and processor silence

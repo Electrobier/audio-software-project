@@ -1,0 +1,3 @@
+PASS processor Mono/Stereo, Double, six sample rates and five block sizes
+PASS VST3 host discovery, instantiation, audio, state; latency=8
+PASS state restore, disk preset, A/B and processor silence

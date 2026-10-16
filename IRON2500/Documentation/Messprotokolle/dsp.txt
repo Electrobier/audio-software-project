@@ -1,0 +1,80 @@
+attack sr=44100 target_ms=0.03 sample_ms=0.0453515 GR=11.692 expected=11.692
+attack sr=44100 target_ms=0.1 sample_ms=0.113379 GR=10.1728 expected=10.1728
+attack sr=44100 target_ms=0.3 sample_ms=0.31746 GR=9.79381 expected=9.79381
+attack sr=44100 target_ms=1 sample_ms=1.02041 GR=9.59328 expected=9.59328
+attack sr=44100 target_ms=3 sample_ms=3.01587 GR=9.51093 expected=9.51093
+attack sr=44100 target_ms=10 sample_ms=10 GR=9.48181 expected=9.48181
+attack sr=44100 target_ms=30 sample_ms=30 GR=9.48181 expected=9.48181
+release sr=44100 target_s=0.05 GR=5.51819
+release sr=44100 target_s=0.1 GR=5.51819
+release sr=44100 target_s=0.2 GR=5.51819
+release sr=44100 target_s=0.5 GR=5.51819
+release sr=44100 target_s=1 GR=5.51819
+release sr=44100 target_s=2 GR=5.51819
+attack sr=48000 target_ms=0.03 sample_ms=0.0416667 GR=11.2597 expected=11.2597
+attack sr=48000 target_ms=0.1 sample_ms=0.104167 GR=9.70701 expected=9.70701
+attack sr=48000 target_ms=0.3 sample_ms=0.3125 GR=9.70701 expected=9.70701
+attack sr=48000 target_ms=1 sample_ms=1 GR=9.48181 expected=9.48181
+attack sr=48000 target_ms=3 sample_ms=3 GR=9.48181 expected=9.48181
+attack sr=48000 target_ms=10 sample_ms=10 GR=9.48181 expected=9.48181
+attack sr=48000 target_ms=30 sample_ms=30 GR=9.48181 expected=9.48181
+release sr=48000 target_s=0.05 GR=5.51819
+release sr=48000 target_s=0.1 GR=5.51819
+release sr=48000 target_s=0.2 GR=5.51819
+release sr=48000 target_s=0.5 GR=5.51819
+release sr=48000 target_s=1 GR=5.51819
+release sr=48000 target_s=2 GR=5.51819
+attack sr=88200 target_ms=0.03 sample_ms=0.0340136 GR=10.1728 expected=10.1728
+attack sr=88200 target_ms=0.1 sample_ms=0.102041 GR=9.59328 expected=9.59328
+attack sr=88200 target_ms=0.3 sample_ms=0.306122 GR=9.59328 expected=9.59328
+attack sr=88200 target_ms=1 sample_ms=1.00907 GR=9.53163 expected=9.53163
+attack sr=88200 target_ms=3 sample_ms=3.00454 GR=9.49014 expected=9.49014
+attack sr=88200 target_ms=10 sample_ms=10 GR=9.48181 expected=9.48181
+attack sr=88200 target_ms=30 sample_ms=30 GR=9.48181 expected=9.48181
+release sr=88200 target_s=0.05 GR=5.51819
+release sr=88200 target_s=0.1 GR=5.51819
+release sr=88200 target_s=0.2 GR=5.51819
+release sr=88200 target_s=0.5 GR=5.51819
+release sr=88200 target_s=1 GR=5.51819
+release sr=88200 target_s=2 GR=5.51819
+attack sr=96000 target_ms=0.03 sample_ms=0.03125 GR=9.70701 expected=9.70701
+attack sr=96000 target_ms=0.1 sample_ms=0.104167 GR=9.70701 expected=9.70701
+attack sr=96000 target_ms=0.3 sample_ms=0.302083 GR=9.52 expected=9.52
+attack sr=96000 target_ms=1 sample_ms=1 GR=9.48181 expected=9.48181
+attack sr=96000 target_ms=3 sample_ms=3 GR=9.48181 expected=9.48181
+attack sr=96000 target_ms=10 sample_ms=10 GR=9.48181 expected=9.48181
+attack sr=96000 target_ms=30 sample_ms=30 GR=9.48181 expected=9.48181
+release sr=96000 target_s=0.05 GR=5.51819
+release sr=96000 target_s=0.1 GR=5.51819
+release sr=96000 target_s=0.2 GR=5.51819
+release sr=96000 target_s=0.5 GR=5.51819
+release sr=96000 target_s=1 GR=5.51819
+release sr=96000 target_s=2 GR=5.51819
+attack sr=176400 target_ms=0.03 sample_ms=0.0340136 GR=10.1728 expected=10.1728
+attack sr=176400 target_ms=0.1 sample_ms=0.102041 GR=9.59328 expected=9.59328
+attack sr=176400 target_ms=0.3 sample_ms=0.300454 GR=9.49014 expected=9.49014
+attack sr=176400 target_ms=1 sample_ms=1.0034 GR=9.50055 expected=9.50055
+attack sr=176400 target_ms=3 sample_ms=3.00454 GR=9.49014 expected=9.49014
+attack sr=176400 target_ms=10 sample_ms=10 GR=9.48181 expected=9.48181
+attack sr=176400 target_ms=30 sample_ms=30 GR=9.48181 expected=9.48181
+release sr=176400 target_s=0.05 GR=5.51819
+release sr=176400 target_s=0.1 GR=5.51819
+release sr=176400 target_s=0.2 GR=5.51819
+release sr=176400 target_s=0.5 GR=5.51819
+release sr=176400 target_s=1 GR=5.51819
+release sr=176400 target_s=2 GR=5.51819
+attack sr=192000 target_ms=0.03 sample_ms=0.03125 GR=9.70701 expected=9.70701
+attack sr=192000 target_ms=0.1 sample_ms=0.104167 GR=9.70701 expected=9.70701
+attack sr=192000 target_ms=0.3 sample_ms=0.302083 GR=9.52 expected=9.52
+attack sr=192000 target_ms=1 sample_ms=1 GR=9.48181 expected=9.48181
+attack sr=192000 target_ms=3 sample_ms=3 GR=9.48181 expected=9.48181
+attack sr=192000 target_ms=10 sample_ms=10 GR=9.48181 expected=9.48181
+attack sr=192000 target_ms=30 sample_ms=30 GR=9.48181 expected=9.48181
+release sr=192000 target_s=0.05 GR=5.51819
+release sr=192000 target_s=0.1 GR=5.51819
+release sr=192000 target_s=0.2 GR=5.51819
+release sr=192000 target_s=0.5 GR=5.51819
+release sr=192000 target_s=1 GR=5.51819
+release sr=192000 target_s=2 GR=5.51819
+sine 60Hz GR normal=8.9091 loud=4.4217; 6kHz normal=8.99508 loud=10.6445
+PASS: 1115868 assertions

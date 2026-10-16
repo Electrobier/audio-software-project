@@ -1,0 +1,12 @@
+[0/2] Re-checking globbed directories...
+[1/10] Building CXX object CMakeFiles/IRON2500.dir/Source/PluginProcessor.cpp.o
+[2/10] Building CXX object CMakeFiles/IRON2500.dir/Source/PluginEditor.cpp.o
+[3/10] Linking CXX static library "IRON2500_artefacts/Release/libIRON 2500_SharedCode.a"
+[4/10] Building CXX object CMakeFiles/iron_dsp_tests.dir/Tests/DspTests.cpp.o
+[5/10] Linking CXX executable iron_dsp_tests
+[6/10] Linking CXX executable "IRON2500_artefacts/Release/Standalone/IRON 2500"
+[7/10] Linking CXX shared module "IRON2500_artefacts/Release/VST3/IRON 2500.vst3/Contents/x86_64-linux/IRON 2500.so"
+removing moduleinfo.json
+creating /workspace/work/build-linux/IRON2500_artefacts/Release/VST3/IRON 2500.vst3/Contents/Resources/moduleinfo.json
+[8/10] Building CXX object CMakeFiles/iron_state_tests.dir/Tests/StateTests.cpp.o
+[9/10] Linking CXX executable iron_state_tests

@@ -1,0 +1,9 @@
+Test project /workspace/work/build-linux
+    Start 1: DSP
+1/2 Test #1: DSP ..............................   Passed    1.63 sec
+    Start 2: State
+2/2 Test #2: State ............................   Passed    0.02 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   1.65 sec

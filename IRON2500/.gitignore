@@ -1,0 +1,7 @@
+Build/
+build*/
+.vs/
+*.user
+
+# JUCE is included in the complete source ZIP; Git checkouts fetch the pinned version.
+ThirdParty/JUCE/
