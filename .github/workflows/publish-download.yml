@@ -1,0 +1,46 @@
+name: Publish Windows download
+on:
+  push:
+    branches: [publish-sample-intelligence-download]
+    paths: ['.github/workflows/publish-download.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download previously tested Windows package
+        uses: actions/download-artifact@v4
+        with:
+          name: SampleIntelligencePro-Windows-x64
+          run-id: 39232525219
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: windows-package
+      - name: Compress complete application directory
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          root=Path('windows-package')
+          assert (root/'SampleIntelligencePro.exe').is_file()
+          assert (root/'_internal'/'models'/'efficientat.onnx').is_file()
+          with zipfile.ZipFile('SampleIntelligencePro-Windows-x64.zip','w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+              for p in root.rglob('*'):
+                  if p.is_file(): z.write(p,'SampleIntelligencePro/'+str(p.relative_to(root)))
+          PY
+          sha256sum SampleIntelligencePro-Windows-x64.zip
+      - name: Publish permanent GitHub release download
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cat > release-notes.md <<'NOTES'
+          Windows x64 desktop application. Download SampleIntelligencePro-Windows-x64.zip, extract the entire folder, and run SampleIntelligencePro.exe. Python is not required. Keep the _internal folder alongside the executable.
+
+          Built on Windows with PyInstaller. All 15 functional tests passed, followed by a successful self-test of the packaged Windows application covering DSP analysis, bundled ONNX inference, SQLite, the Qt window, cosine search and background decoding. Audio hardware and Cubase interoperability still require practical testing.
+
+          The local EfficientAT model is included. Detailed features, limitations and test reports are in README.md and PRUEFBERICHT.md in the source code. Specialized sample categories can require manually labelled examples.
+          NOTES
+          gh release create sample-intelligence-pro-v1.0.0 SampleIntelligencePro-Windows-x64.zip --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title 'Sample Intelligence Pro 1.0.0 – Windows x64' --notes-file release-notes.md
