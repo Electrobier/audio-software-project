@@ -1,0 +1,8 @@
+{
+  "samples": 100001,
+  "insert_seconds": 0.471,
+  "filter_count_and_page_seconds": 0.028,
+  "full_spectral_search_seconds": 0.468,
+  "result_limit": 1000,
+  "note": "synthetic rows and 9-dimensional vectors; no 100k real-audio timing"
+}

@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "checks": [
+    "DSP analysis",
+    "bundled ONNX inference (384-d embedding)",
+    "SQLite upsert",
+    "Qt window and sample table",
+    "cosine search",
+    "background decoding"
+  ],
+  "hardware_audio_tested": false
+}

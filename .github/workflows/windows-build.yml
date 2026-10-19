@@ -1,0 +1,44 @@
+name: Windows desktop build
+on:
+  push:
+    branches: [sample-intelligence-pro-download]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Install runtime and build dependencies
+        run: python -m pip install -r requirements.txt pytest pyinstaller
+      - name: Run functional tests
+        run: python -m pytest -q
+        env:
+          QT_QPA_PLATFORM: offscreen
+      - name: Build Windows desktop application
+        run: python -m PyInstaller --noconfirm SampleIntelligencePro.spec
+      - name: Test packaged application
+        shell: pwsh
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          $report = Join-Path $env:RUNNER_TEMP 'packaged-selftest.json'
+          $process = Start-Process -FilePath 'dist\SampleIntelligencePro\SampleIntelligencePro.exe' -ArgumentList '--self-test', $report -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw "Packaged application failed: $($process.ExitCode)" }
+          $result = Get-Content $report -Raw | ConvertFrom-Json
+          if (-not $result.ok) { throw (Get-Content $report -Raw) }
+          Get-Content $report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SampleIntelligencePro-Windows-x64
+          path: dist/SampleIntelligencePro/
+          retention-days: 30
