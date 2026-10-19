@@ -12,15 +12,24 @@
 - 12 echte synthetische Audiodateien für einen Oberflächentest erzeugt, analysiert und angezeigt; keine erfundenen Datenbankeinträge für die Vorschau.
 - Datenbanktest mit **100.001 synthetischen Einträgen**: Einfügen 0,471 s; Filterzählung und Seite 0,028 s; vollständige Suche mit 9-dimensionalen Spektralvektoren 0,468 s, begrenzt auf 1.000 angezeigte Ergebnisse. Das sind Messwerte der Testumgebung, keine zugesicherte Leistung auf Benutzerhardware oder bei 384-dimensionalen KI-Vektoren.
 
+## Zusätzlich unter Windows geprüft
+
+GitHub-Actions-Lauf: https://github.com/Electrobier/audio-software-project/actions/runs/39232525219
+
+- Windows x64, Python 3.12.10: **15 Tests bestanden in 35,46 s**.
+- PyInstaller-Windows-Build erfolgreich.
+- Gepackte Windows-EXE mit `--self-test` gestartet; Ergebnis `ok: true` für DSP, mitgeliefertes ONNX-Modell, SQLite, Qt-Fenster/Sample-Tabelle, Cosinussuche und Hintergrunddekodierung. Qt lief dabei offscreen, ohne angeschlossene Audiohardware.
+- Windows-ZIP als GitHub-Actions-Artefakt erstellt (178.487.040 Bytes); SHA-256 `896dcd8462506d74aaf1f5723a09fa2d8e40f84660e6ca9a8a7efc957e44bd39`. Eine zusätzlich veröffentlichte Release-Datei kann durch erneute Komprimierung eine andere Prüfsumme haben.
+
 ## Nicht ausgeführt / keine Abnahmebehauptung
 
-- Windows-10/11-Build oder Start einer Windows-EXE.
+- Interaktiver Test auf einem echten Windows-10/11-Desktop mit Benutzerhardware.
 - Hörtest mit echten Audiogeräten, Mikrofon-/Windows-Loopbackaufnahme oder Mehrgeräteverhalten.
 - Verschieben echter Benutzerdateien in den Windows-Papierkorb.
 - Tatsächliches Drag-and-drop nach Cubase 15 Pro.
 - Analyse und Bedienung einer echten Bibliothek von mehr als 100.000 Audiodateien.
 - Validierung der Instrumenten-/BPM-/Tonarterkennung auf einem repräsentativen, gelabelten Sample-Datensatz.
 
-Die Windows-Startskripte und die PyInstaller-Spezifikation liegen bereit. Der Quellcode ist ausführbar; eine vollständige professionelle Windows-Abnahme aller Anforderungen ist noch offen. Fachliche Grenzen und nicht implementierte optionale Funktionen sind in README.md beschrieben.
+Die Windows-Startskripte und die PyInstaller-Spezifikation liegen bereit. Quellcode und ein automatisiert getestetes Windows-Paket sind vorhanden; eine vollständige professionelle Abnahme aller Anforderungen auf Benutzerhardware ist noch offen. Fachliche Grenzen und nicht implementierte optionale Funktionen sind in README.md beschrieben.
 
 Maschinenlesbare Berichte und der echte Screenshot liegen unter docs/.

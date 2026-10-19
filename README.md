@@ -2,7 +2,16 @@
 
 Lokaler Audio-Sample-Manager für Windows 10/11 x64. Python, PySide6/Qt, librosa, SQLite und ein mitgeliefertes EfficientAT-Audiomodell. Die Oberfläche folgt der gelieferten Referenz: linke Navigation, Stereo-Wellenform oben, kompakte Metadatentabelle, Kategorienraster unten. Ein zusätzlicher Inspektor ist ausblendbar und dockbar.
 
-## Sofort starten unter Windows
+
+## Downloads
+
+**[Fertige Windows-Anwendung herunterladen](https://github.com/Electrobier/audio-software-project/releases/download/sample-intelligence-pro-v1.0.0/SampleIntelligencePro-Windows-x64.zip)**
+
+ZIP vollständig entpacken und `SampleIntelligencePro.exe` starten. Python ist für dieses Paket nicht erforderlich. Das gesamte Verzeichnis einschließlich `_internal` muss zusammenbleiben.
+
+**[Quellcode mit Start- und Buildskripten herunterladen](https://github.com/Electrobier/audio-software-project/archive/refs/heads/sample-intelligence-pro-download.zip)**
+
+## Aus dem Quellcode starten unter Windows
 
 1. Diesen vollständigen Ordner auf ein lokales Laufwerk entpacken.
 2. **Python 3.12, 64 Bit** von python.org installieren. „Add Python to PATH“ aktivieren.
@@ -24,7 +33,7 @@ dist\SampleIntelligencePro\SampleIntelligencePro.exe
 
 **Den gesamten Ordner `SampleIntelligencePro` weitergeben.** Die EXE benötigt die daneben enthaltenen Bibliotheken und das mitgelieferte Modell. Auf dem Ziel-PC ist dann kein Python erforderlich. Die App hat keine Registrierung oder Aktivierung. Das Paket ist nicht signiert; Windows kann deshalb eine SmartScreen-Abfrage anzeigen.
 
-**Lieferstatus:** Der Quellcode und die Start-/Buildskripte sind vorhanden. Die Anwendung wurde in einer Linux-Testumgebung ausgeführt. Eine fertig gebaute oder auf Windows getestete EXE liegt diesem Quellpaket nicht bei. Die Datei `.github/workflows/windows-build.yml` enthält zusätzlich einen manuell startbaren Windows-Build für GitHub Actions; dieser wurde hier nicht ausgelöst.
+**Lieferstatus:** Der Quellcode ist auf GitHub verfügbar. GitHub Actions hat zusätzlich das Windows-x64-Paket gebaut: **15 Tests bestanden (35,46 s)**; anschließend wurde die gepackte Windows-EXE erfolgreich im Offscreen-Modus gestartet und mit echter DSP-/KI-Analyse, SQLite, Qt-Tabelle, Ähnlichkeitssuche und Hintergrunddekodierung geprüft. [Prüflauf ansehen](https://github.com/Electrobier/audio-software-project/actions/runs/39232525219). Audiohardware und Cubase wurden dabei nicht getestet.
 
 ## Bedienung
 
@@ -85,7 +94,7 @@ Unter Linux zusätzlich PortAudio (`libportaudio2`) und die Qt-Systembibliotheke
 
 Die Tests prüfen Messwerte an erzeugten Signalen, Container-/Bit-Tiefen-Identität, float64-Unterschiede, Audioähnlichkeit, kombinierte Filter, Incremental Scan, Verschiebeerkennung, Kategorienlernen, Exportkonflikte, Stereo-/Loop-/Pause-Callbacks und die Duplikat-Auswahlregeln. `--self-test` prüft zusätzlich die echte ONNX-Inferenz, Worker-Dekodierung und das Qt-Fenster. Der beigefügte Prüfbericht benennt, was tatsächlich ausgeführt wurde.
 
-**Noch auf einem Windows-PC zu prüfen:** EXE-Build und Start, echte Audioausgabe, Mikrofon-/Loopbackgeräte, Windows-Papierkorb, Cubase 15 Drag-and-drop und eine echte Bibliothek mit mehr als 100.000 Audiodateien. Der synthetische 100.001-Zeilen-Benchmark prüft lediglich Datenbank und Suchpfad, keine entsprechende Audio-Sammlung oder Echtzeit-Garantie.
+**Noch auf einem Windows-PC praktisch zu prüfen:** interaktive Bedienung mit echter Anzeige, echte Audioausgabe, Mikrofon-/Loopbackgeräte, Windows-Papierkorb, Cubase 15 Drag-and-drop und eine echte Bibliothek mit mehr als 100.000 Audiodateien. Der synthetische 100.001-Zeilen-Benchmark prüft lediglich Datenbank und Suchpfad, keine entsprechende Audio-Sammlung oder Echtzeit-Garantie.
 
 Optionale Anforderungen Pitch-Shifting, Time-Stretching, Host-Tempo-Synchronisation und ein Cubase-Plug-in sind nicht implementiert. Der übermittelte Auftrag endete im Abschnitt Cubase-Integration nach einem leeren Aufzählungspunkt; spätere Anforderungen lagen nicht vor.
 

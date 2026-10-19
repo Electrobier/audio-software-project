@@ -1,0 +1,12 @@
+{
+  "workflow_run": "https://github.com/Electrobier/audio-software-project/actions/runs/39232525219",
+  "commit": "9ecf927e5c27ecb8e27ad341fc1b949a8b22afae",
+  "platform": "Windows x64",
+  "python": "3.12.10",
+  "tests_passed": 15,
+  "test_seconds": 35.46,
+  "pyinstaller_build": "success",
+  "packaged_selftest": "success",
+  "hardware_audio_tested": false,
+  "cubase_tested": false
+}
