@@ -1,25 +1,30 @@
 # audio-software-project
 Entwicklung einer Audio-Software für Windows
 
-## SAMPLE INTELLIGENCE PRO herunterladen
+## SAMPLE INTELLIGENCE PRO – fertige Windows-Anwendung
 
-**[Vollständiges Projekt als ZIP herunterladen](https://github.com/Electrobier/audio-software-project/archive/refs/heads/sample-intelligence-pro-download.zip)**
+**[Windows-ZIP direkt herunterladen (ca. 170 MB)](https://github.com/Electrobier/audio-software-project/releases/download/sample-intelligence-pro-v1.0.0/SampleIntelligencePro-Windows-x64.zip)**
 
-**[Programmdateien und Anleitung ansehen](https://github.com/Electrobier/audio-software-project/tree/sample-intelligence-pro-download)**
+**[Release-Seite mit Download öffnen](https://github.com/Electrobier/audio-software-project/releases/tag/sample-intelligence-pro-v1.0.0)**
 
-Das ZIP enthält den ausführbaren Python-Quellcode, die Desktop-Oberfläche, das lokale KI-Modell sowie Windows-Start- und Buildskripte.
+1. ZIP vollständig entpacken.
+2. Im Ordner `SampleIntelligencePro` die Datei **SampleIntelligencePro.exe** starten.
+3. Den Unterordner `_internal` und die anderen mitgelieferten Dateien zusammenlassen.
 
-### Start unter Windows
+**Python und `Einrichten.bat` sind für dieses fertige Windows-Paket nicht nötig.**
 
-1. ZIP herunterladen und vollständig entpacken.
-2. Python 3.12, 64 Bit installieren.
-3. `Einrichten.bat` ausführen (Ersteinrichtung benötigt Internet).
-4. `Starten.bat` öffnen. Die Anwendung läuft danach offline.
+### Geprüft
 
-### Windows-EXE
+Auf GitHub unter Windows x64 gebaut. Alle **15 Funktionstests bestanden**; anschließend wurde die gepackte EXE erfolgreich gestartet und mit DSP-Audioanalyse, lokalem ONNX-KI-Modell, SQLite, Qt-Oberfläche, Cosinussuche und Hintergrunddekodierung getestet. Qt lief im automatisierten Test offscreen. Echte Audiohardware und Cubase-Drag-and-drop müssen noch praktisch geprüft werden.
 
-Ein automatischer Windows-Build ist eingerichtet. **[Build und verfügbare Windows-Downloads ansehen](https://github.com/Electrobier/audio-software-project/actions/runs/39232525219)**. Nach erfolgreichem Build steht unten auf der Seite unter „Artifacts“ das ZIP `SampleIntelligencePro-Windows-x64` bereit (GitHub-Anmeldung erforderlich). Den gesamten ZIP-Inhalt entpacken und `SampleIntelligencePro.exe` starten. Erst ein erfolgreicher Build mit vorhandenem Artefakt bedeutet, dass dieses Windows-Paket tatsächlich verfügbar ist.
+[Windows-Prüflauf ansehen](https://github.com/Electrobier/audio-software-project/actions/runs/39232525219)
 
-Alternativ erstellt `EXE_erstellen.bat` nach der lokalen Einrichtung das Windows-Paket.
+### Quellcode und Anleitung
 
-Der Quellcode-Download wurde von GitHub zurückgeladen und einschließlich der Prüfsumme des enthaltenen KI-Modells kontrolliert. Funktionsumfang, verbleibende Grenzen und Prüfstatus stehen in der README und im Prüfbericht im Programm-Branch.
+**[Vollständigen Quellcode als ZIP herunterladen](https://github.com/Electrobier/audio-software-project/archive/refs/heads/sample-intelligence-pro-download.zip)**
+
+[Programmdateien und ausführliche Anleitung ansehen](https://github.com/Electrobier/audio-software-project/tree/sample-intelligence-pro-download)
+
+Nur beim Start aus dem Quellcode: ein passendes Python 3.10–3.13 (64 Bit) verwenden, `Einrichten.bat` und danach `Starten.bat` ausführen. Das Einrichtungsskript sucht vorhandene Versionen und versucht bei Bedarf `py install 3.12` mit dem Python Install Manager. Die Ersteinrichtung benötigt Internet; die Anwendung selbst läuft offline. `EXE_erstellen.bat` erstellt alternativ lokal das Windows-Paket.
+
+Funktionsumfang, fachliche Grenzen und Prüfstatus stehen in README.md und PRUEFBERICHT.md im Programm-Branch. Das Modell erkennt grobe Instrumente und Ereignisse; spezielle Unterkategorien können eigene gelabelte Beispiele benötigen.
