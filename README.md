@@ -15,7 +15,7 @@ ZIP vollständig entpacken und `SampleIntelligencePro.exe` starten. Python ist f
 
 1. Diesen vollständigen Ordner auf ein lokales Laufwerk entpacken.
 2. **Python 3.12, 64 Bit** von python.org installieren. „Add Python to PATH“ aktivieren.
-3. **Einrichten.bat** doppelklicken. Nur die Ersteinrichtung benötigt Internet zum Installieren der Python-Pakete.
+3. **Einrichten.bat** doppelklicken. Das Skript sucht zuerst ein vorhandenes Python 3.10–3.13 (64 Bit); fehlt es, versucht es `py install 3.12` mit dem neuen Python Install Manager. Nur die Ersteinrichtung benötigt Internet zum Installieren der Python-Pakete.
 4. **Starten.bat** doppelklicken.
 5. **+ Bibliothek** wählen und einen Sample-Ordner hinzufügen. Der erste Scan berechnet die Analysewerte im Hintergrund.
 
