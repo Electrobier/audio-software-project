@@ -1,0 +1,1 @@
+Die Oberfläche wird vollständig mit JUCE-Vektorgrafik gezeichnet. Keine externen Laufzeitbilder erforderlich. Oberflaeche.png und Classic.png sind automatisch erzeugte Testvorschauen, falls im Paket enthalten.

@@ -1,0 +1,9 @@
+Test project /workspace/work/build-plugin
+    Start 1: DSP
+1/2 Test #1: DSP ..............................   Passed    5.71 sec
+    Start 2: State
+2/2 Test #2: State ............................   Passed    0.01 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   5.72 sec

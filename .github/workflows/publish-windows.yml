@@ -1,0 +1,25 @@
+name: Publish White224 verified Windows package
+on:
+  workflow_dispatch:
+  push:
+    branches: ['white224-release-*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test Windows x64
+        shell: pwsh
+        run: ./scripts/build-windows.ps1
+      - name: Publish verified ZIP and checksum
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Copy-Item Build/Release.zip Build/White224-Windows-x64.zip
+          Copy-Item Build/Release.zip.sha256 Build/White224-Windows-x64.zip.sha256
+          gh release create white224-v0.1.0 --target $env:GITHUB_SHA --prerelease --title "White224 Vintage Reverb 0.1.0 – Windows x64" --notes-file docs/RELEASE-TEXT.md "Build/White224-Windows-x64.zip" "Build/White224-Windows-x64.zip.sha256"
+          if ($LASTEXITCODE -ne 0) { throw "Release-Publikation fehlgeschlagen" }

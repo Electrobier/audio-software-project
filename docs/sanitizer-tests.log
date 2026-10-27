@@ -1,0 +1,11 @@
+White224 DSP validation
+Program 1 energy=0.0204953
+Program 2 energy=0.0249571
+Program 3 energy=0.0180094
+Program 4 energy=0.0319417
+Program 5 energy=0.0283264
+Program 6 energy=0.0211196
+Program 7 energy=0.0264904
+Program 8 energy=0.0210905
+Program 9 energy=0.05924
+PASS 19091056 assertions, callback allocations=0, full suite seconds=30.8094

@@ -1,0 +1,24 @@
+name: White224 Windows x64
+on:
+  workflow_dispatch:
+  push:
+    branches: ['white224-dev-*']
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build, verify and package
+        shell: pwsh
+        run: ./scripts/build-windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: White224-Windows-x64
+          path: |
+            Build/Release.zip
+            Build/Release.zip.sha256
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,4 @@
+block,steady_audio_seconds,processing_seconds,realtime_percent,max_observed_callback_us
+64,3,0.0577311,1.92437,276.517
+256,3.00267,0.0572144,1.90545,814.709
+1024,3.008,0.0558759,1.85758,607.987

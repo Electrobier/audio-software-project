@@ -1,0 +1,7 @@
+Build/
+build*/
+work/
+measurements/
+third_party/
+*.user
+.vs/
