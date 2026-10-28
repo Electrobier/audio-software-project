@@ -1,0 +1,6 @@
+build/
+corebuild/
+diagnostics/
+RenderedLibrary/
+*.user
+.vs/

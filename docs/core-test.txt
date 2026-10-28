@@ -1,0 +1,1 @@
+PASS 5386188 checks: oscillator, voice, slide, accent, 32 presets, timing, stability, preset restore, MIDI, WAV, 10 kicks

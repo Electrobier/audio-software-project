@@ -1,0 +1,83 @@
+name: Psy303 Windows VST3
+on:
+  push:
+    branches: [psy303-bassline]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test MSVC x64
+        shell: pwsh
+        run: |
+          ./build-windows.ps1
+          ctest --test-dir build -C Release --output-on-failure --output-log docs/windows-ctest.txt
+          if ($LASTEXITCODE -ne 0) { throw 'Windows tests failed' }
+          ./build/Release/psy303_plugin_tests.exe docs
+          if ($LASTEXITCODE -ne 0) { throw 'Windows integration or GUI snapshot test failed' }
+      - name: Standalone startup smoke test
+        shell: pwsh
+        run: |
+          $Exe=Join-Path $PWD 'build/Psy303_artefacts/Release/Standalone/Psy303 Bassline.exe'
+          $Process=Start-Process -FilePath $Exe -PassThru
+          Start-Sleep -Seconds 5
+          if ($Process.HasExited) { throw "Standalone exited early: $($Process.ExitCode)" }
+          Stop-Process -Id $Process.Id
+          'PASS: Windows standalone stayed running for 5 seconds. Audiohardware and Cubase not tested.' | Set-Content docs/windows-startup.txt
+      - name: Render all 32 basslines and 10 kicks on Windows
+        shell: pwsh
+        run: |
+          ./build/Release/psy303_render.exe RenderedLibrary
+          if ($LASTEXITCODE -ne 0) { throw 'Library rendering failed' }
+          ./build/Release/psy303_diagnostics.exe diagnostics
+          if ($LASTEXITCODE -ne 0) { throw 'DSP diagnostic rendering failed' }
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent MIDI, WAV and spectral checks
+        shell: pwsh
+        run: |
+          python -m pip install numpy scipy
+          if ($LASTEXITCODE -ne 0) { throw 'Python dependencies failed' }
+          python tools/analyse.py RenderedLibrary | Tee-Object -FilePath docs/windows-file-tests.txt
+          if ($LASTEXITCODE -ne 0) { throw 'Independent file validation failed' }
+          python tools/spectrum.py diagnostics | Tee-Object -FilePath docs/windows-spectrum.txt
+          if ($LASTEXITCODE -ne 0) { throw 'Spectral checks failed' }
+      - name: Build official Steinberg validator
+        shell: pwsh
+        run: |
+          git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/steinbergmedia/vst3sdk.git vst3sdk
+          if ($LASTEXITCODE -ne 0) { throw 'Steinberg SDK download failed' }
+          git -C vst3sdk rev-parse HEAD | Set-Content docs/windows-validator-sdk.txt
+          cmake -S vst3sdk -B validator-build -G 'Visual Studio 17 2022' -A x64 -DSMTG_ENABLE_VSTGUI_SUPPORT=OFF -DSMTG_ENABLE_VST3_PLUGIN_EXAMPLES=OFF -DSMTG_ENABLE_VST3_HOSTING_EXAMPLES=OFF -DSMTG_RUN_VST_VALIDATOR=OFF
+          if ($LASTEXITCODE -ne 0) { throw 'Validator configure failed' }
+          cmake --build validator-build --config Release --target validator --parallel 2
+          if ($LASTEXITCODE -ne 0) { throw 'Validator build failed' }
+      - name: Validate Windows VST3 bundle
+        shell: pwsh
+        run: |
+          $Validator=Get-ChildItem validator-build -Filter validator.exe -Recurse | Select-Object -First 1
+          if (!$Validator) { throw 'Validator executable missing' }
+          & $Validator.FullName (Join-Path $PWD 'build/Psy303_artefacts/Release/VST3/Psy303 Bassline.vst3') 2>&1 | Tee-Object -FilePath docs/windows-vst3-validator.txt
+          if ($LASTEXITCODE -ne 0) { throw 'VST3 validation failed' }
+      - name: Package verified Windows binaries
+        shell: pwsh
+        run: ./tools/package-windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Psy303-Windows-x64
+          path: dist/Psy303-Windows-x64/
+          if-no-files-found: error
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Psy303-Windows-Testberichte
+          path: |
+            docs/windows-*
+            build/Testing/Temporary/LastTest.log
+          if-no-files-found: warn

@@ -1,0 +1,27 @@
+[  8%] Built target psy303_tests
+[  8%] Built target psy303_render
+[ 12%] Built target juce_vst3_helper
+[ 16%] Built target psy303_diagnostics
+[ 18%] Building CXX object CMakeFiles/Psy303.dir/Source/Editor.cpp.o
+/workspace/work/psy303/Source/Editor.cpp: In lambda function:
+/workspace/work/psy303/Source/Editor.cpp:35:921: warning: ‘std::filesystem::__cxx11::path std::filesystem::__cxx11::u8path(const _Source&) [with _Source = std::__cxx11::basic_string<char>; _Require = path; _CharT = char]’ is deprecated: use 'path((const char8_t*)&*source)' instead [-Wdeprecated-declarations]
+   35 | void Editor::exportFile(){if(busy)return;int type=exportType.getSelectedItemIndex();chooser=std::make_unique<juce::FileChooser>("Export pattern / kick",juce::File{},type==0?"*.mid":"*.wav");auto safe=juce::Component::SafePointer<Editor>(this);chooser->launchAsync(juce::FileBrowserComponent::saveMode|juce::FileBrowserComponent::canSelectFiles|juce::FileBrowserComponent::warnAboutOverwriting,[safe,type](const juce::FileChooser&c){if(!safe)return;auto f=c.getResult();if(f==juce::File{})return;auto*e=safe.getComponent();if(e->worker.joinable())e->worker.join();auto preset=e->p.snapshot();int count=int(e->repeats.getValue()),kick=e->kickSelect.getSelectedItemIndex();bool withTail=e->tail.getToggleState();double bpm=e->tempo.getValue();KickParams kp{e->p.get("kTune"),e->p.get("kStart"),e->p.get("kPitch"),e->p.get("kDecay"),e->p.get("kClick"),e->p.get("kDrive"),e->p.get("kLevel")};auto path=std::filesystem::u8path(f.withFileExtension(type==0?"mid":"wav").getFullPathName().toStdString());e->busy=true;e->exportButton.setEnabled(false);e->status.setText("Rendering...",juce::dontSendNotification);e->worker=std::thread([e,preset,count,kick,kp,withTail,bpm,path,type]{try{if(type==0)midi(path,preset.pattern,bpm);else if(type==13){Kick k;k.p=kp;k.trigger();std::vector<float> a(96000);for(auto&x:a)x=k.tick(48000);wav(path,a,48000);}else{int index=type-1;int sr=index/4==0?44100:index/4==1?48000:96000;auto a=render(preset,sr,count,bpm,withTail);wav(path,a,sr,index%4>=2?32:24,index%2==1?2:1);}e->result=1;}catch(...){e->result=-1;}e->busy=false;});});}
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/14/filesystem:52,
+                 from /workspace/work/psy303/Source/Core.h:10,
+                 from /workspace/work/psy303/Source/Plugin.h:3,
+                 from /workspace/work/psy303/Source/Editor.h:2,
+                 from /workspace/work/psy303/Source/Editor.cpp:1:
+/usr/include/c++/14/bits/fs_path.h:843:5: note: declared here
+  843 |     u8path(const _Source& __source)
+      |     ^~~~~~
+[ 20%] Linking CXX static library "Psy303_artefacts/Release/libPsy303 Bassline_SharedCode.a"
+[ 58%] Built target Psy303
+[ 62%] Linking CXX executable "Psy303_artefacts/Release/Standalone/Psy303 Bassline"
+[ 62%] Linking CXX shared module "Psy303_artefacts/Release/VST3/Psy303 Bassline.vst3/Contents/x86_64-linux/Psy303 Bassline.so"
+[ 79%] Built target Psy303_Standalone
+removing moduleinfo.json
+[ 81%] Linking CXX executable psy303_plugin_tests
+creating /workspace/work/build/Psy303_artefacts/Release/VST3/Psy303 Bassline.vst3/Contents/Resources/moduleinfo.json
+[ 97%] Built target Psy303_VST3
+[100%] Built target psy303_plugin_tests

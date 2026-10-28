@@ -1,0 +1,9 @@
+Test project /workspace/work/build
+    Start 1: core
+1/2 Test #1: core .............................   Passed    3.43 sec
+    Start 2: plugin
+2/2 Test #2: plugin ...........................   Passed    0.10 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   3.52 sec

@@ -1,0 +1,2 @@
+Fontconfig error: No writable cache directories
+PASS plugin: sample accurate MIDI, note priority, all notes off, MIDI learn with closed editor, APVTS restore, host seek/loop across six buffers, zero operator-new allocations in 100 callbacks

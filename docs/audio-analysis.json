@@ -1,0 +1,586 @@
+{
+  "wavs": [
+    {
+      "file": "Basslines/10_Pulse Garden.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.33681249618530273,
+      "dc": 6.593183092292753e-05,
+      "rms": 0.06746140565862584,
+      "max_delta": 0.014105558395385742,
+      "top_10_percent_spectral_energy": 2.422537044151421e-10
+    },
+    {
+      "file": "Basslines/11_Elastic Roots.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.4138270616531372,
+      "dc": 2.0572455118787274e-05,
+      "rms": 0.11794722760788653,
+      "max_delta": 0.022739887237548828,
+      "top_10_percent_spectral_energy": 4.4219740835866984e-10
+    },
+    {
+      "file": "Basslines/12_Helix Motion.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.38993358612060547,
+      "dc": 9.545330448220975e-05,
+      "rms": 0.0743095682562044,
+      "max_delta": 0.03463268280029297,
+      "top_10_percent_spectral_energy": 3.1063425059199885e-10
+    },
+    {
+      "file": "Basslines/13_Silver Stream.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.2671898603439331,
+      "dc": 7.63644808989358e-07,
+      "rms": 0.09999121531913932,
+      "max_delta": 0.015314817428588867,
+      "top_10_percent_spectral_energy": 3.0492987387764605e-10
+    },
+    {
+      "file": "Basslines/14_Photon Train.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.42284560203552246,
+      "dc": 0.0001025093015067874,
+      "rms": 0.07818948364628546,
+      "max_delta": 0.0785137414932251,
+      "top_10_percent_spectral_energy": 5.331592585229917e-10
+    },
+    {
+      "file": "Basslines/15_Gravity Roll.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.47616708278656006,
+      "dc": -2.0687404155715068e-07,
+      "rms": 0.13223696563019352,
+      "max_delta": 0.11780881881713867,
+      "top_10_percent_spectral_energy": 7.218895168926761e-10
+    },
+    {
+      "file": "Basslines/16_Sunrise Grid.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.44692671298980713,
+      "dc": 0.00013304194262669177,
+      "rms": 0.08126755669974621,
+      "max_delta": 0.17582356929779053,
+      "top_10_percent_spectral_energy": 3.1427602815314596e-09
+    },
+    {
+      "file": "Basslines/17_Abyss Signal.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.3659846782684326,
+      "dc": 0.0001107319497559477,
+      "rms": 0.07333923404893838,
+      "max_delta": 0.03764188289642334,
+      "top_10_percent_spectral_energy": 2.186957746920946e-09
+    },
+    {
+      "file": "Basslines/18_Obsidian.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.44797205924987793,
+      "dc": 1.3693746599969474e-05,
+      "rms": 0.12450214223238243,
+      "max_delta": 0.026946544647216797,
+      "top_10_percent_spectral_energy": 3.6205859408086504e-09
+    },
+    {
+      "file": "Basslines/19_Night Circuit.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.3619948625564575,
+      "dc": 0.00011789714557114838,
+      "rms": 0.07998341182714055,
+      "max_delta": 0.04745888710021973,
+      "top_10_percent_spectral_energy": 3.4332250234459636e-09
+    },
+    {
+      "file": "Basslines/1_Ion Storm.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.18428850173950195,
+      "dc": 1.9064079662676946e-05,
+      "rms": 0.038257077976584127,
+      "max_delta": 0.010932207107543945,
+      "top_10_percent_spectral_energy": 4.221884476768215e-10
+    },
+    {
+      "file": "Basslines/20_Sub Ritual.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.4656146764755249,
+      "dc": -6.8953542718984266e-06,
+      "rms": 0.133406553266535,
+      "max_delta": 0.07975590229034424,
+      "top_10_percent_spectral_energy": 1.2339479743461603e-07
+    },
+    {
+      "file": "Basslines/21_Shadow Root.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.4130512475967407,
+      "dc": 0.00013536379355829118,
+      "rms": 0.07745087163513066,
+      "max_delta": 0.12886369228363037,
+      "top_10_percent_spectral_energy": 4.219040157025491e-09
+    },
+    {
+      "file": "Basslines/22_Black Spiral.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.4373762607574463,
+      "dc": -4.521362953121688e-05,
+      "rms": 0.13695860983217636,
+      "max_delta": 0.21429526805877686,
+      "top_10_percent_spectral_energy": 2.981784276880977e-07
+    },
+    {
+      "file": "Basslines/23_Deep Canopy.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.4285234212875366,
+      "dc": 0.00015962487496144493,
+      "rms": 0.07970948744764982,
+      "max_delta": 0.30233633518218994,
+      "top_10_percent_spectral_energy": 3.6459781556076815e-08
+    },
+    {
+      "file": "Basslines/24_Lunar Engine.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.4435703754425049,
+      "dc": 3.507010113276438e-06,
+      "rms": 0.14081399580726955,
+      "max_delta": 0.412585973739624,
+      "top_10_percent_spectral_energy": 1.3923291569098312e-06
+    },
+    {
+      "file": "Basslines/25_Bent Geometry.wav",
+      "rate": 48000,
+      "samples": 167173,
+      "peak": 0.3925420045852661,
+      "dc": 2.617114295043752e-06,
+      "rms": 0.14768868545706546,
+      "max_delta": 0.04192531108856201,
+      "top_10_percent_spectral_energy": 1.5712277591348757e-09
+    },
+    {
+      "file": "Basslines/26_Broken Prism.wav",
+      "rate": 48000,
+      "samples": 177104,
+      "peak": 0.3635878562927246,
+      "dc": 9.985702873428659e-05,
+      "rms": 0.08661897962081702,
+      "max_delta": 0.043053627014160156,
+      "top_10_percent_spectral_energy": 7.795598307777322e-10
+    },
+    {
+      "file": "Basslines/27_Quantum Steps.wav",
+      "rate": 48000,
+      "samples": 187035,
+      "peak": 0.44095826148986816,
+      "dc": 6.421119612845912e-06,
+      "rms": 0.15940339830524564,
+      "max_delta": 0.07053148746490479,
+      "top_10_percent_spectral_energy": 9.8958389487432e-10
+    },
+    {
+      "file": "Basslines/28_Odd Creature.wav",
+      "rate": 48000,
+      "samples": 196966,
+      "peak": 0.40383434295654297,
+      "dc": 0.00012612507456421409,
+      "rms": 0.09598783991891735,
+      "max_delta": 0.10923612117767334,
+      "top_10_percent_spectral_energy": 5.983271090814294e-09
+    },
+    {
+      "file": "Basslines/29_Voltage Maze.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.40701985359191895,
+      "dc": 6.637059315364454e-06,
+      "rms": 0.15618806793459172,
+      "max_delta": 0.17619025707244873,
+      "top_10_percent_spectral_energy": 9.686422224992727e-09
+    },
+    {
+      "file": "Basslines/2_Phosphor.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.23023450374603271,
+      "dc": -2.0773600232588087e-07,
+      "rms": 0.06789703840850442,
+      "max_delta": 0.021915316581726074,
+      "top_10_percent_spectral_energy": 3.341510687050786e-09
+    },
+    {
+      "file": "Basslines/30_Mutant Orbit.wav",
+      "rate": 48000,
+      "samples": 167173,
+      "peak": 0.41397035121917725,
+      "dc": 0.00011755913799258711,
+      "rms": 0.08802910963748947,
+      "max_delta": 0.25735723972320557,
+      "top_10_percent_spectral_energy": 3.226718190688111e-07
+    },
+    {
+      "file": "Basslines/31_Chromatic Rain.wav",
+      "rate": 48000,
+      "samples": 177104,
+      "peak": 0.47151267528533936,
+      "dc": 4.587373427446968e-06,
+      "rms": 0.16147330926882145,
+      "max_delta": 0.38815557956695557,
+      "top_10_percent_spectral_energy": 5.099896709679104e-07
+    },
+    {
+      "file": "Basslines/32_Event Horizon.wav",
+      "rate": 48000,
+      "samples": 187035,
+      "peak": 0.4283407926559448,
+      "dc": 0.00011983238252032031,
+      "rms": 0.0895825426042476,
+      "max_delta": 0.4529995918273926,
+      "top_10_percent_spectral_energy": 3.0607217211644096e-06
+    },
+    {
+      "file": "Basslines/3_Solar Coil.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.22862112522125244,
+      "dc": 2.051528107662077e-05,
+      "rms": 0.045102404234243054,
+      "max_delta": 0.039359450340270996,
+      "top_10_percent_spectral_energy": 1.6749394379047958e-09
+    },
+    {
+      "file": "Basslines/4_Acid Bloom.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.2632502317428589,
+      "dc": 3.4380250191057854e-07,
+      "rms": 0.08051857862572735,
+      "max_delta": 0.0676201581954956,
+      "top_10_percent_spectral_energy": 1.1960342557616036e-07
+    },
+    {
+      "file": "Basslines/5_Fractal Bite.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.2551175355911255,
+      "dc": 2.0091296057023828e-05,
+      "rms": 0.04770888675294106,
+      "max_delta": 0.11071836948394775,
+      "top_10_percent_spectral_energy": 3.849617579581157e-09
+    },
+    {
+      "file": "Basslines/6_Neon Serpent.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.2973613739013672,
+      "dc": 1.1422489769374175e-06,
+      "rms": 0.08866839334285949,
+      "max_delta": 0.17748355865478516,
+      "top_10_percent_spectral_energy": 2.8510194916569453e-07
+    },
+    {
+      "file": "Basslines/7_Proton Rush.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.28708815574645996,
+      "dc": 2.399800878706474e-05,
+      "rms": 0.05350917030766036,
+      "max_delta": 0.26829683780670166,
+      "top_10_percent_spectral_energy": 1.129161377464391e-06
+    },
+    {
+      "file": "Basslines/8_Liquid Fire.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.3156452178955078,
+      "dc": 2.46462528363705e-06,
+      "rms": 0.09698102647271091,
+      "max_delta": 0.32199084758758545,
+      "top_10_percent_spectral_energy": 7.632009508192259e-06
+    },
+    {
+      "file": "Basslines/9_Orbit Runner.wav",
+      "rate": 48000,
+      "samples": 206897,
+      "peak": 0.2246948480606079,
+      "dc": -1.4401238352408762e-06,
+      "rms": 0.0840083713726306,
+      "max_delta": 0.003989458084106445,
+      "top_10_percent_spectral_energy": 4.069855174673061e-10
+    },
+    {
+      "file": "Kicks/10_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.6997114419937134,
+      "dc": 0.00018226280187567075,
+      "rms": 0.27170448818082354,
+      "max_delta": 1.1038869619369507,
+      "top_10_percent_spectral_energy": 4.0810275466315005e-13
+    },
+    {
+      "file": "Kicks/1_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.5349618196487427,
+      "dc": 0.0003295383726557096,
+      "rms": 0.08022994380805061,
+      "max_delta": 0.07938194274902344,
+      "top_10_percent_spectral_energy": 4.507901986955577e-13
+    },
+    {
+      "file": "Kicks/2_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.5980355739593506,
+      "dc": 0.0003247623567779859,
+      "rms": 0.10314038200385096,
+      "max_delta": 0.15967583656311035,
+      "top_10_percent_spectral_energy": 4.732018062942339e-13
+    },
+    {
+      "file": "Kicks/3_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.6417300701141357,
+      "dc": 0.0003101861054698626,
+      "rms": 0.1259741788081854,
+      "max_delta": 0.25590717792510986,
+      "top_10_percent_spectral_energy": 3.7471981731322306e-13
+    },
+    {
+      "file": "Kicks/4_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.667951226234436,
+      "dc": 0.0002908793352544308,
+      "rms": 0.1484456858352889,
+      "max_delta": 0.36774158477783203,
+      "top_10_percent_spectral_energy": 2.5561932159995143e-13
+    },
+    {
+      "file": "Kicks/5_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.6819279193878174,
+      "dc": 0.0002699308345715205,
+      "rms": 0.17040507906877667,
+      "max_delta": 0.5008667707443237,
+      "top_10_percent_spectral_energy": 2.411133375947244e-13
+    },
+    {
+      "file": "Kicks/6_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.6912343502044678,
+      "dc": 0.00024826149766643844,
+      "rms": 0.19179499422949678,
+      "max_delta": 0.6396232843399048,
+      "top_10_percent_spectral_energy": 1.8149979386948707e-13
+    },
+    {
+      "file": "Kicks/7_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.695671796798706,
+      "dc": 0.00022488772496581078,
+      "rms": 0.21260093659234075,
+      "max_delta": 0.775577187538147,
+      "top_10_percent_spectral_energy": 3.00763936002825e-13
+    },
+    {
+      "file": "Kicks/8_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.6981498003005981,
+      "dc": 0.00020521336421370505,
+      "rms": 0.2328469158437862,
+      "max_delta": 0.9011967182159424,
+      "top_10_percent_spectral_energy": 2.998322158053602e-13
+    },
+    {
+      "file": "Kicks/9_PsyKick.wav",
+      "rate": 48000,
+      "samples": 96000,
+      "peak": 0.6992471218109131,
+      "dc": 0.00019617404912908873,
+      "rms": 0.25253392485268483,
+      "max_delta": 1.0113662481307983,
+      "top_10_percent_spectral_energy": 4.3577691208340583e-13
+    }
+  ],
+  "midi": [
+    {
+      "file": "12_Helix Motion.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "1_Ion Storm.mid",
+      "notes": 15,
+      "end_tick": 3739
+    },
+    {
+      "file": "25_Bent Geometry.mid",
+      "notes": 11,
+      "end_tick": 2837
+    },
+    {
+      "file": "16_Sunrise Grid.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "4_Acid Bloom.mid",
+      "notes": 14,
+      "end_tick": 3557
+    },
+    {
+      "file": "10_Pulse Garden.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "28_Odd Creature.mid",
+      "notes": 14,
+      "end_tick": 3577
+    },
+    {
+      "file": "22_Black Spiral.mid",
+      "notes": 15,
+      "end_tick": 3797
+    },
+    {
+      "file": "29_Voltage Maze.mid",
+      "notes": 14,
+      "end_tick": 3842
+    },
+    {
+      "file": "5_Fractal Bite.mid",
+      "notes": 14,
+      "end_tick": 3842
+    },
+    {
+      "file": "26_Broken Prism.mid",
+      "notes": 11,
+      "end_tick": 2882
+    },
+    {
+      "file": "3_Solar Coil.mid",
+      "notes": 15,
+      "end_tick": 3797
+    },
+    {
+      "file": "30_Mutant Orbit.mid",
+      "notes": 11,
+      "end_tick": 2821
+    },
+    {
+      "file": "2_Phosphor.mid",
+      "notes": 14,
+      "end_tick": 3768
+    },
+    {
+      "file": "15_Gravity Roll.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "21_Shadow Root.mid",
+      "notes": 14,
+      "end_tick": 3842
+    },
+    {
+      "file": "31_Chromatic Rain.mid",
+      "notes": 12,
+      "end_tick": 3048
+    },
+    {
+      "file": "27_Quantum Steps.mid",
+      "notes": 13,
+      "end_tick": 3266
+    },
+    {
+      "file": "20_Sub Ritual.mid",
+      "notes": 14,
+      "end_tick": 3557
+    },
+    {
+      "file": "24_Lunar Engine.mid",
+      "notes": 15,
+      "end_tick": 3768
+    },
+    {
+      "file": "8_Liquid Fire.mid",
+      "notes": 15,
+      "end_tick": 3768
+    },
+    {
+      "file": "19_Night Circuit.mid",
+      "notes": 15,
+      "end_tick": 3797
+    },
+    {
+      "file": "6_Neon Serpent.mid",
+      "notes": 15,
+      "end_tick": 3797
+    },
+    {
+      "file": "13_Silver Stream.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "14_Photon Train.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "11_Elastic Roots.mid",
+      "notes": 12,
+      "end_tick": 3715
+    },
+    {
+      "file": "17_Abyss Signal.mid",
+      "notes": 15,
+      "end_tick": 3739
+    },
+    {
+      "file": "23_Deep Canopy.mid",
+      "notes": 14,
+      "end_tick": 3739
+    },
+    {
+      "file": "18_Obsidian.mid",
+      "notes": 14,
+      "end_tick": 3768
+    },
+    {
+      "file": "7_Proton Rush.mid",
+      "notes": 14,
+      "end_tick": 3739
+    },
+    {
+      "file": "32_Event Horizon.mid",
+      "notes": 13,
+      "end_tick": 3327
+    },
+    {
+      "file": "9_Orbit Runner.mid",
+      "notes": 12,
+      "end_tick": 3715
+    }
+  ]
+}
