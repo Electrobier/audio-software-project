@@ -1,0 +1,2 @@
+PASS: 42 WAVs, 32 independent SMF parses. Peak 0.699711, max abs DC 0.00032954
+Spectral energy is diagnostic; it is not by itself a proof of low aliasing.

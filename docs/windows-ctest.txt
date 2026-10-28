@@ -1,0 +1,14 @@
+[OUTPUT] 
+Internal ctest changing into directory: D:/a/audio-software-project/audio-software-project/build
+
+[HANDLER_OUTPUT] 
+Test project D:/a/audio-software-project/audio-software-project/build
+
+    Start 1: core
+1/2 Test #1: core .............................   Passed    3.03 sec
+    Start 2: plugin
+2/2 Test #2: plugin ...........................   Passed    0.10 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   3.13 sec

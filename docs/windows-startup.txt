@@ -1,0 +1,1 @@
+PASS: Windows standalone stayed running for 5 seconds. Audiohardware and Cubase not tested.

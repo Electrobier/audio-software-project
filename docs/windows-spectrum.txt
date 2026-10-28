@@ -1,0 +1,11 @@
+{
+  "filter_1x": 0.020831731840069773,
+  "filter_2x": 0.004823631415001501,
+  "filter_4x": 0.0015166475947862878,
+  "saw_blep": 0.00597532755038209,
+  "saw_naive": 0.1318486535003524,
+  "square_blep": 0.005814635360490471,
+  "square_naive": 0.09705631740453294
+}
+Coherent 5 kHz oscillator: BLEP alias-bin power is at least 3 dB below naive.
+Filter aliases include output tanh; no hardware-emulation accuracy claim.
