@@ -1,0 +1,72 @@
+name: Psy303 Windows Download
+on:
+  push:
+    branches: [psy303-bassline]
+    paths: [Delivery/windows-build.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  deliver:
+    runs-on: windows-2022
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read verified build reference
+        id: build
+        shell: pwsh
+        run: |
+          $Build=Get-Content Delivery/windows-build.json -Raw | ConvertFrom-Json
+          "run_id=$($Build.run_id)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      - uses: actions/download-artifact@v4
+        with:
+          name: Psy303-Windows-x64
+          run-id: ${{ steps.build.outputs.run_id }}
+          github-token: ${{ github.token }}
+          path: dist/Psy303-Windows-x64
+      - name: Assemble final documentation and ZIP
+        shell: pwsh
+        run: |
+          $Stage='dist/Psy303-Windows-x64'
+          $Build=Get-Content Delivery/windows-build.json -Raw | ConvertFrom-Json
+          $Run=Invoke-RestMethod -Uri "https://api.github.com/repos/$env:GITHUB_REPOSITORY/actions/runs/$($Build.run_id)" -Headers @{ Authorization="Bearer $env:GH_TOKEN"; 'X-GitHub-Api-Version'='2022-11-28' }
+          if($Run.conclusion -ne 'success' -or $Run.head_sha -ne $Build.validated_sha){throw 'The referenced build is not the expected successful build'}
+          $Validation=Get-Content "$Stage/docs/windows-vst3-validator.txt" -Raw
+          if($Validation -notmatch 'Result: (\d+) tests passed, 0 tests failed'){throw 'Successful Windows validation report missing'}
+          $Passed=$Matches[1]
+          Copy-Item README.md "$Stage/README.md" -Force
+          Copy-Item docs/WINDOWS-NACHWEIS.md "$Stage/docs/WINDOWS-NACHWEIS.md" -Force
+          @"
+          Windows x64 / MSVC Release
+          Build: $($Run.html_url)
+          Validated source: $($Build.validated_sha)
+          Official Steinberg validator: $Passed passed, 0 failed.
+          CTest DSP and plugin suites passed. Standalone startup test passed.
+          32 basslines, 10 kicks, independent MIDI/WAV and spectral checks passed.
+          Cubase and physical audiohardware were not manually tested.
+          "@ | Set-Content "$Stage/BUILD_STATUS.txt" -Encoding utf8
+          New-Item -ItemType Directory -Force Downloads | Out-Null
+          Compress-Archive -Path "$Stage/*" -DestinationPath Downloads/Psy303-Windows-x64.zip -Force
+          $Hash=Get-FileHash Downloads/Psy303-Windows-x64.zip -Algorithm SHA256
+          "$($Hash.Hash.ToLower())  Psy303-Windows-x64.zip" | Set-Content Downloads/Psy303-Windows-x64.sha256 -Encoding ascii
+          Copy-Item "$Stage/docs/windows-*" docs -Force
+          Copy-Item "$Stage/docs/interface-*.png" docs -Force
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Psy303-Windows-x64-Download
+          path: Downloads/Psy303-Windows-x64.*
+          if-no-files-found: error
+          retention-days: 90
+      - name: Put verified ZIP on the requested branch
+        shell: pwsh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Downloads docs
+          git commit -m 'Deliver tested Windows VST3 ZIP and Windows reports [skip ci]'
+          if($LASTEXITCODE -ne 0){throw 'Download commit failed'}
+          git push origin HEAD:psy303-bassline
+          if($LASTEXITCODE -ne 0){throw 'Download push failed; artifact remains available'}

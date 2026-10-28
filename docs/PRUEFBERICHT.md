@@ -4,7 +4,7 @@
 
 Linux x86_64, GCC 14.2, C++20, CMake 4.4, JUCE 8.0.6 Commit `51a8a6d7aeae7326956d747737ccf1575e61e209`. Release-VST3 und Standalone wurden tatsächlich kompiliert. Das VST3-Bundle wurde von Steinbergs offiziellem Validator geladen und geprüft. SDK-Stand: Commit `3cdf9ca5d1f5b1b21e0a86832aa4abe55607bd96` samt Submodulen. **47 Tests bestanden, 0 fehlgeschlagen.** Die Warnung zu gleichzeitig vorhandener moduleinfo.json und IPluginCompatibility ist eine Prioritätshinweis-Meldung des Validators, kein fehlgeschlagener Test.
 
-Windows/MSVC und Cubase 15 Pro standen nicht zur Verfügung. Ein tatsächlicher MinGW-Cross-Build-Versuch scheiterte am expliziten JUCE-Compilerverbot. Es gibt deshalb kein fertiges Windows-Binary in dieser Lieferung. Das Source-Projekt enthält ein Windows-MSVC-Buildskript, Installationsskript und eine noch nicht unter Windows ausgeführte CI-Konfiguration. Das ist kein Nachweis für einen erfolgreichen Windows-Build.
+Anschließend wurde der Windows-MSVC-Release-Build auf GitHub Actions erfolgreich ausgeführt. DSP-/Plugin-Tests, Standalone-Start, Bibliotheksrendering und unabhängige Dateiprüfungen bestanden. Der offizielle Windows-VST3-Validator meldet **47 Tests bestanden, 0 fehlgeschlagen**. Quelle und Rohprotokolle: [Windows-Prüflauf](https://github.com/Electrobier/audio-software-project/actions/runs/40678724592), `WINDOWS-NACHWEIS.md` und `windows-*`. Cubase und echte Audiohardware stehen für den manuellen Produktionstest noch aus.
 
 ## Automatisch ausgeführt
 
@@ -47,7 +47,7 @@ Damit reduziert BLEP die gemessene Alias-Bin-Energie in diesem gezielten Test um
 
 ## Noch manuell zu prüfen
 
-Windows-MSVC-Build und Ausführung, Cubase-15-Instrumentenscan, echte MIDI-/ASIO-Hardware, Hostautomationsaufzeichnung, Projekt-Neuladen, native Dateidialoge, Undo-/Redo-Bedienung, Controller- und Fenster-Lebenszyklus, Windows-DPI-Änderungen, Last unter langen Sessions und praxisgerechtes Abhören. Der offizielle Validator läuft hier am Linux-Build; er validiert keine Windows-ABI und garantiert keine Cubase-Kompatibilität.
+Cubase-15-Instrumentenscan und Installation auf Windows 10/11, echte MIDI-/ASIO-Hardware, Hostautomationsaufzeichnung, Projekt-Neuladen, native Dateidialoge, Undo-/Redo-Bedienung, Controller- und Fenster-Lebenszyklus, Windows-DPI-Änderungen, Last unter langen Sessions und praxisgerechtes Abhören. Der offizielle Validator wurde am Linux- und Windows-Build ausgeführt; er garantiert keine Cubase-Kompatibilität.
 
 ## Bewusste Grenzen
 

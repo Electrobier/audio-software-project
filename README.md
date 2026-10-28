@@ -2,11 +2,15 @@
 
 Eigenständiger monophoner Acid-/Psytrance-Synthesizer in C++20, JUCE 8.0.6 und CMake. Echte Audio-Engine, grafischer 64-Step-Editor, 32 eigene Factory-Presets, MIDI-/WAV-Export und separates Kick-Exportmodul. Eigene Vektorgrafik, angelehnt an die sichtbare silbergraue Referenz. Keine messtechnisch validierte Hardware-Emulation und kein identischer Nachbau des unbekannten Originals.
 
-## Liefer- und Prüfstatus
+## Windows herunterladen und Prüfstatus
 
-**Windows-VST3 ist in diesem Paket noch nicht kompiliert.** Die Entwicklungsmaschine ist Linux. Ein Cross-Build mit MinGW wurde versucht; JUCE 8.0.6 lehnt diesen Compiler ausdrücklich ab. Der vorgesehene Windows-Weg ist Visual Studio 2022. Die beiliegende Windows-CI-Konfiguration wurde hier nicht ausgeführt.
+**[Fertiges Windows-x64-Paket herunterladen](https://github.com/Electrobier/audio-software-project/raw/refs/heads/psy303-bassline/Downloads/Psy303-Windows-x64.zip)** · [SHA256](Downloads/Psy303-Windows-x64.sha256) · [Windows-Prüflauf](https://github.com/Electrobier/audio-software-project/actions/runs/40678724592)
 
-Hier erfolgreich ausgeführt: vollständiger Linux-Release-Build von VST3 und Standalone, DSP- und Plugin-Integrationstests, offizieller Steinberg-Validator am Linux-VST3 (**47 bestanden, 0 fehlgeschlagen**), unabhängige SMF-/WAV-Prüfungen, Offline-Rendering aller 32 Basslines und 10 Kicks, GUI-Snapshots in vier Größen. Berichte unter `docs/`. Eine Linux-Binärdatei lässt sich nicht in Windows-Cubase laden.
+Das fertige ZIP benötigt zum Installieren keinen Compiler. Es enthält das komplette VST3-Bundle, die Standalone-EXE, 32 MIDI-Patterns, 32 Bassline-WAVs und zehn Kick-WAVs. ZIP vollständig entpacken und `INSTALLATION.txt` lesen. Den gesamten Ordner `VST3/Psy303 Bassline.vst3` nach `C:\Program Files\Common Files\VST3\` kopieren; alternativ das enthaltene `Install-VST3.ps1` als Administrator ausführen.
+
+**Tatsächlich unter Windows x64 mit Visual Studio 2022 gebaut und geprüft:** DSP- und Plugin-Integrationstests, Starttest der Standalone-Version, Rendering der gesamten Bibliothek, unabhängige MIDI-/WAV-/Spektralprüfungen und offizieller Steinberg-VST3-Validator (**47 bestanden, 0 fehlgeschlagen**). Der Windows-Runner ist Windows Server 2022. Windows 10/11 auf echter Audiohardware und Cubase 15 Pro sind noch manuell zu prüfen. Kein Audiohardware- oder Cubase-Test wird durch einen erfolgreichen Validator ersetzt.
+
+Zusätzlich bestehen die ursprünglichen Linux-Builds und -Tests. Automatische Windows-Nachweise stehen unter `docs/windows-*`, die Zusammenfassung unter `docs/WINDOWS-NACHWEIS.md`. Der validierte Quellcode-Commit ist `3ace963d3998b0bc7fa4658210fe34b000da1943`. Die anschließenden Bereitstellungscommits ergänzen Dokumentation und Download-Dateien.
 
 ## Windows 10/11 x64: bauen
 
@@ -113,11 +117,11 @@ python tools/analyse.py Library
 python tools/spectrum.py diagnostics
 ```
 
-Steinbergs offiziellen Validator aus dessen SDK separat bauen und gegen das **Windows-Bundle** ausführen. Hier wurde nur das Linux-Bundle mit dem offiziellen Validator getestet. Windows-Skripte und GitHub-Workflow liegen bei, wurden hier jedoch nicht unter Windows ausgeführt.
+Steinbergs offiziellen Validator aus dessen SDK separat bauen und gegen das **Windows-Bundle** ausführen. Linux- und Windows-Bundle wurden mit dem offiziellen Validator getestet. Windows-Skripte und GitHub-Workflow wurden im oben verlinkten Windows-Prüflauf erfolgreich ausgeführt.
 
 ## Vor Produktion manuell prüfen
 
-Windows-MSVC-Build, Cubase-15-Scan, ASIO und echte Audioausgabe, Hostautomation und Projektspeicherung/-öffnung, Loop-/Tempoänderungen, externe Controller, Dateidialoge, native DPI-Änderungen und Undo in der realen Session. GUI-Snapshots prüfen Schärfe/Anordnung, ersetzen keinen Bedienungstest. Keine Klangidentität oder vollständige Feature-Identität mit einem fremden Original zugesichert. Detaillierte Grenzen und Messwerte: `docs/PRUEFBERICHT.md`.
+Cubase-15-Scan, Installation auf Windows 10/11, ASIO und echte Audioausgabe, Hostautomation und Projektspeicherung/-öffnung, Loop-/Tempoänderungen, externe Controller, Dateidialoge, native DPI-Änderungen und Undo in der realen Session. GUI-Snapshots prüfen Schärfe/Anordnung, ersetzen keinen Bedienungstest. Keine Klangidentität oder vollständige Feature-Identität mit einem fremden Original zugesichert. Detaillierte Grenzen und Messwerte: `docs/PRUEFBERICHT.md`.
 
 ## Lizenz
 

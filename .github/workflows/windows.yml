@@ -2,6 +2,12 @@ name: Psy303 Windows VST3
 on:
   push:
     branches: [psy303-bassline]
+    paths-ignore:
+      - README.md
+      - docs/**
+      - Downloads/**
+      - Delivery/**
+      - .github/workflows/deliver.yml
   workflow_dispatch:
 permissions:
   contents: read
